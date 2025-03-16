@@ -1,17 +1,17 @@
+// components/Navbar.tsx
 import { useState } from "react";
-import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white dark:bg-gray-800 shadow-md fixed w-full z-10 transition-colors duration-300">
+    <nav className="bg-white shadow-md fixed w-full z-10">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
             <a
               href="#"
-              className="font-bold text-2xl tracking-wider text-indigo-600 dark:text-indigo-400 font-display"
+              className="font-bold text-2xl tracking-wider text-gray-600 font-display"
             >
               CodeMamba
             </a>
@@ -22,38 +22,36 @@ export default function Navbar() {
             <div className="ml-10 flex items-center space-x-4">
               <a
                 href="#about"
-                className="px-3 py-2 rounded-md hover:bg-indigo-50 dark:hover:bg-indigo-900 hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors dark:text-gray-200"
+                className="px-3 py-2 rounded-md hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
               >
                 About
               </a>
               <a
                 href="#skills"
-                className="px-3 py-2 rounded-md hover:bg-indigo-50 dark:hover:bg-indigo-900 hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors dark:text-gray-200"
+                className="px-3 py-2 rounded-md hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
               >
                 Skills
               </a>
               <a
                 href="#projects"
-                className="px-3 py-2 rounded-md hover:bg-indigo-50 dark:hover:bg-indigo-900 hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors dark:text-gray-200"
+                className="px-3 py-2 rounded-md hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
               >
                 Projects
               </a>
               <a
                 href="#socials"
-                className="px-3 py-2 rounded-md hover:bg-indigo-50 dark:hover:bg-indigo-900 hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors dark:text-gray-200"
+                className="px-3 py-2 rounded-md hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
               >
                 Contact
               </a>
-              <ThemeToggle />
             </div>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center space-x-2">
-            <ThemeToggle />
+          <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none transition-colors"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none"
             >
               <svg
                 className="h-6 w-6"
@@ -86,28 +84,28 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 dark:bg-gray-800">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <a
               href="#about"
-              className="block px-3 py-2 rounded-md hover:bg-indigo-50 dark:hover:bg-indigo-900 hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors dark:text-gray-200"
+              className="block px-3 py-2 rounded-md hover:bg-indigo-50 hover:text-indigo-600"
             >
               About
             </a>
             <a
               href="#skills"
-              className="block px-3 py-2 rounded-md hover:bg-indigo-50 dark:hover:bg-indigo-900 hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors dark:text-gray-200"
+              className="block px-3 py-2 rounded-md hover:bg-indigo-50 hover:text-indigo-600"
             >
               Skills
             </a>
             <a
               href="#projects"
-              className="block px-3 py-2 rounded-md hover:bg-indigo-50 dark:hover:bg-indigo-900 hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors dark:text-gray-200"
+              className="block px-3 py-2 rounded-md hover:bg-indigo-50 hover:text-indigo-600"
             >
               Projects
             </a>
             <a
               href="#socials"
-              className="block px-3 py-2 rounded-md hover:bg-indigo-50 dark:hover:bg-indigo-900 hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors dark:text-gray-200"
+              className="block px-3 py-2 rounded-md hover:bg-indigo-50 hover:text-indigo-600"
             >
               Contact
             </a>
