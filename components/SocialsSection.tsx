@@ -1,6 +1,6 @@
 // components/SocialsSection.tsx
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { FaX } from "react-icons/fa6";
+import { FaX, FaXTwitter } from "react-icons/fa6";
 
 export default function SocialsSection() {
   return (
@@ -14,8 +14,8 @@ export default function SocialsSection() {
             rel="noopener noreferrer"
             className="flex flex-col items-center hover:opacity-80 transition-opacity"
           >
-            <div className="w-16 h-16 bg-white text-black-600 rounded-full flex items-center justify-center mb-2">
-              <FaGithub className="w-8 h-8" />
+            <div className="w-10 h-10 bg-white text-black-600 rounded-full flex items-center justify-center mb-2">
+              <FaGithub className="w-5 h-5" />
             </div>
           </a>
           <a
@@ -24,8 +24,8 @@ export default function SocialsSection() {
             rel="noopener noreferrer"
             className="flex flex-col items-center hover:opacity-80 transition-opacity"
           >
-            <div className="w-16 h-16 bg-white text-blue-600 rounded-full flex items-center justify-center mb-2">
-              <FaLinkedin className="w-8 h-8" />
+            <div className="w-10 h-10 bg-white text-gray-600 rounded-full flex items-center justify-center mb-2">
+              <FaLinkedin className="w-5 h-5" />
             </div>
           </a>
           <a
@@ -34,8 +34,8 @@ export default function SocialsSection() {
             rel="noopener noreferrer"
             className="flex flex-col items-center hover:opacity-80 transition-opacity"
           >
-            <div className="w-16 h-16 bg-white text-black-600 rounded-full flex items-center justify-center mb-2">
-              <FaX className="w-8 h-8" />
+            <div className="w-10 h-10 bg-white text-black-600 rounded-full flex items-center justify-center mb-2">
+              <FaXTwitter className="w-5 h-5" />
             </div>
           </a>
         </div>

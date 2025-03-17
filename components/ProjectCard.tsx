@@ -32,7 +32,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           {project.technologies.map((tech, index) => (
             <span
               key={index}
-              className="bg-indigo-50 text-indigo-700 px-2 py-1 rounded text-xs"
+              className="bg-gray-50 text-gray-700 px-2 py-1 rounded text-xs"
             >
               {tech}
             </span>
@@ -40,9 +40,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         </div>
         <a
           href="#"
-          className="text-indigo-600 font-medium hover:text-indigo-800 transition-colors"
+          className="text-gray-600 font-medium hover:text-gray-800 transition-colors"
         >
-          View Project →
+          View Project
         </a>
       </div>
     </div>

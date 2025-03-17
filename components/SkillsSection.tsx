@@ -15,14 +15,14 @@ export default function SkillsSection({ skills }: SkillsSectionProps) {
             <div className="grid md:grid-cols-2 gap-6">
               {skills.map((skillGroup, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-                  <h3 className="text-xl font-semibold mb-4 text-indigo-600">
+                  <h3 className="text-xl font-semibold mb-4 text-gray-700">
                     {skillGroup.category}
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     {skillGroup.items.map((skill, i) => (
                       <span
                         key={i}
-                        className="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-sm"
+                        className="bg-gray-50 text-gray-700 px-3 py-1 rounded-full text-sm"
                       >
                         {skill}
                       </span>
