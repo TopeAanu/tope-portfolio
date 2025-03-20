@@ -1,10 +1,10 @@
-// tailwind.config.js
+// tailwind.config.js - update for Next.js
 module.exports = {
-  darkMode: "class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: "class", // Using class strategy for dark mode
   theme: {
     extend: {},
   },
