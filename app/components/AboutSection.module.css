@@ -1,0 +1,111 @@
+/* AboutSection.module.css */
+
+.section {
+  padding: 5rem 0;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+.contentInner {
+  width: 100%;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .contentInner {
+    width: 66.666667%;
+  }
+}
+
+.heading {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.paragraph {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+.lastParagraph {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  background-color: #374151;
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #6b7280;
+}
+
+/* Dark mode styling can be added here if needed */
+.sectionDark {
+  background-color: #1f2937;
+}
+
+.headingDark {
+  color: #f3f4f6;
+}
+
+.paragraphDark {
+  color: #d1d5db;
+}
+
+.buttonDark {
+  background-color: #4b5563;
+}
+
+.buttonDark:hover {
+  background-color: #6b7280;
+}
+
+/* AboutSection.module.css - Add/update these rules */
+
+.sectionDark {
+  background-color: #1f2937;
+}
+
+.headingDark {
+  color: #f3f4f6;
+}
+
+.paragraphDark {
+  color: #d1d5db;
+}
+
+.lastParagraphDark {
+  color: #d1d5db;
+}
+
+.buttonDark {
+  background-color: #4b5563;
+}
+
+.buttonDark:hover {
+  background-color: #6b7280;
+}

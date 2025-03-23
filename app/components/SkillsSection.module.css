@@ -1,0 +1,95 @@
+/* SkillsSection.module.css */
+
+.section {
+  padding: 5rem 0;
+  background-color: #f9fafb;
+}
+
+.sectionDark {
+  background-color: #111827;
+}
+
+.container {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+.contentInner {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .contentInner {
+    width: 66.666667%;
+  }
+}
+
+.heading {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #1f2937;
+}
+
+.headingDark {
+  color: #ffffff;
+}
+
+.skillsGrid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .skillsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.skillCard {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.skillCardDark {
+  background-color: #1f2937;
+}
+
+.skillCategory {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #374151;
+}
+
+.skillCategoryDark {
+  color: #e5e7eb;
+}
+
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skillBadge {
+  background-color: #f9fafb;
+  color: #374151;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+}
+
+.skillBadgeDark {
+  background-color: #374151;
+  color: #e5e7eb;
+}
