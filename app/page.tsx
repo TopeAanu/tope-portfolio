@@ -30,23 +30,29 @@ export default function Home() {
   // Define project data
   const projectsData = [
     {
+      id: 1, // Add a unique id
       title: "E-commerce Platform",
-      description: "A fully responsive e-commerce website with product filtering and user authentication.",
+      description:
+        "A fully responsive e-commerce website with product filtering and user authentication.",
       technologies: ["React", "Node.js", "MongoDB", "Express"],
-      imageUrl: "/images/project1.jpg"
+      imageUrl: "/images/project1.jpg",
     },
     {
+      id: 2, // Another unique id
       title: "Task Management App",
-      description: "A productivity application for organizing and tracking personal and team tasks.",
+      description:
+        "A productivity application for organizing and tracking personal and team tasks.",
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Firebase"],
-      imageUrl: "/images/project2.jpg"
+      imageUrl: "/images/project2.jpg",
     },
     {
+      id: 3, // And another
       title: "Portfolio Website",
-      description: "A modern, responsive portfolio website showcasing web development projects.",
+      description:
+        "A modern, responsive portfolio website showcasing web development projects.",
       technologies: ["React", "Tailwind CSS", "Framer Motion"],
-      imageUrl: "/images/project3.jpg"
-    }
+      imageUrl: "/images/project3.jpg",
+    },
   ];
 
   return (

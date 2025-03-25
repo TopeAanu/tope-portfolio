@@ -1,0 +1,97 @@
+.projectsSection {
+  padding: 5rem 0;
+  background-color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.projectsSection_dark {
+  background-color: #1e293b;
+  color: #f8fafc;
+}
+
+.sectionTitle {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #111827;
+}
+
+.sectionTitle_dark {
+  color: #f8fafc;
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.projectCard {
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.projectCard_dark {
+  background-color: #334155;
+  color: #f8fafc;
+}
+
+.projectImage {
+  height: 12rem;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projectContent {
+  padding: 1.5rem;
+}
+
+.projectTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.projectTitle_dark {
+  color: #f8fafc;
+}
+
+.projectDescription {
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.projectDescription_dark {
+  color: #e2e8f0;
+}
+
+.techTag {
+  background-color: #f3f4f6;
+  color: #374151;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.techTag_dark {
+  background-color: #475569;
+  color: #f8fafc;
+}
+
+.projectLink {
+  color: #4b5563;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.projectLink_dark {
+  color: #e2e8f0;
+}

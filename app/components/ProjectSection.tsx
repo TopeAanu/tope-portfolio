@@ -1,32 +1,55 @@
-// components/ProjectSection.tsx
+"use client";
+import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
+import { Project } from "./models/types";
 import ProjectCard from "./ProjectCard";
+import styles from "./ProjectSection.module.css";
 
-// Import the Project type or redefine it
-interface Project {
-  title: string;
-  description: string;
-  technologies: string[];
-  imageUrl?: string;
-}
-
-interface ProjectSectionProps {
+type ProjectsSectionProps = {
   projects: Project[];
-}
+};
 
-export default function ProjectSection({ projects }: ProjectSectionProps) {
-  // Add defensive check
-  if (!projects || !Array.isArray(projects)) {
-    return <div>No projects to display</div>;
-  }
+export default function ProjectsSection({ projects }: ProjectsSectionProps) {
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  // Wait for component to mount to access theme
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Determine if we're in dark mode
+  const isDarkMode = mounted && theme === "dark";
 
   return (
-    <section id="projects" className="py-16 bg-white">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">My Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <ProjectCard key={index} project={project} />
-          ))}
+    <section
+      id="projects"
+      className={`
+        ${styles.projectsSection} 
+        ${isDarkMode ? styles.projectsSection_dark : ""}
+      `}
+    >
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="flex justify-center">
+          <div className="w-full md:w-2/3">
+            <h2
+              className={`
+                ${styles.sectionTitle} 
+                ${isDarkMode ? styles.sectionTitle_dark : ""}
+              `}
+            >
+              Projects
+            </h2>
+            <div className={styles.projectGrid}>
+              {projects.map((project) => (
+                <ProjectCard
+                  key={project.id}
+                  project={project}
+                  isDarkMode={isDarkMode}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
