@@ -1,9 +1,12 @@
-// components/Footer.tsx
+import styles from "./Footer.module.css";
+
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-white py-6">
-      <div className="max-w-6xl mx-auto px-4 text-center">
-        <p className="mb-2">&copy; 2025 CodeMamba. All rights reserved.</p>
+    <footer className={styles.footer}>
+      <div className={styles.container}>
+        <p className={styles.copyright}>
+          &copy; 2025 CodeMamba. All rights reserved.
+        </p>
       </div>
     </footer>
   );

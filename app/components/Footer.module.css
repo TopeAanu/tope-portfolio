@@ -1,0 +1,19 @@
+.footer {
+  background-color: #1f2937;
+  color: white;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.container {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+}
+
+.copyright {
+  margin-bottom: 0.5rem;
+}

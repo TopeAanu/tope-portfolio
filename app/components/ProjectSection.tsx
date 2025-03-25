@@ -1,4 +1,5 @@
 "use client";
+
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { Project } from "./models/types";
@@ -25,16 +26,16 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
     <section
       id="projects"
       className={`
-        ${styles.projectsSection} 
+        ${styles.projectsSection}
         ${isDarkMode ? styles.projectsSection_dark : ""}
       `}
     >
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="flex justify-center">
-          <div className="w-full md:w-2/3">
+      <div className={styles.container}>
+        <div className={styles.sectionWrapper}>
+          <div className={styles.sectionContent}>
             <h2
               className={`
-                ${styles.sectionTitle} 
+                ${styles.sectionTitle}
                 ${isDarkMode ? styles.sectionTitle_dark : ""}
               `}
             >
