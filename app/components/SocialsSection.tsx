@@ -1,20 +1,44 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { useTheme } from "next-themes";
 import styles from "./SocialsSection.module.css";
 
 export default function SocialsSection() {
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState<boolean>(false);
+
+  // Wait for component to mount to access theme
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Determine if we're in dark mode
+  const isDarkMode = mounted && theme === "dark";
+
   return (
-    <section id="socials" className={styles.socialsSection}>
+    <section
+      id="socials"
+      className={`${styles.socialsSection} ${
+        isDarkMode ? styles.socialsSection_dark : ""
+      }`}
+    >
       <div className={styles.container}>
-        <div className={styles.socialLinks}>
+        <div className={styles.socialIcons}>
           <a
             href="https://github.com/"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.socialLink}
           >
-            <div className={styles.socialIconWrapper}>
-              <FaGithub className={styles.socialIcon} />
+            <div
+              className={`${styles.iconContainer} ${
+                isDarkMode ? styles.iconContainer_dark : ""
+              }`}
+            >
+              <FaGithub className={styles.icon} />
             </div>
           </a>
           <a
@@ -23,8 +47,12 @@ export default function SocialsSection() {
             rel="noopener noreferrer"
             className={styles.socialLink}
           >
-            <div className={styles.socialIconWrapper}>
-              <FaLinkedin className={styles.socialIcon} />
+            <div
+              className={`${styles.iconContainer} ${
+                isDarkMode ? styles.iconContainer_dark : ""
+              }`}
+            >
+              <FaLinkedin className={styles.icon} />
             </div>
           </a>
           <a
@@ -33,8 +61,12 @@ export default function SocialsSection() {
             rel="noopener noreferrer"
             className={styles.socialLink}
           >
-            <div className={styles.socialIconWrapper}>
-              <FaXTwitter className={styles.socialIcon} />
+            <div
+              className={`${styles.iconContainer} ${
+                isDarkMode ? styles.iconContainer_dark : ""
+              }`}
+            >
+              <FaXTwitter className={styles.icon} />
             </div>
           </a>
         </div>

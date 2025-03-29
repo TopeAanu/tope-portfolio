@@ -1,13 +1,12 @@
 .socialsSection {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  color: #6b7280;
-  background-color: #111827;
-
+  color: #6b7280; /* text-gray-500 */
+  background-color: #F9FAFB; /* Adding explicit background color for light mode */
 }
 
 .container {
-  max-width: 72rem;
+  max-width: 72rem; /* max-w-6xl */
   margin-left: auto;
   margin-right: auto;
   padding-left: 1rem;
@@ -15,36 +14,49 @@
   text-align: center;
 }
 
-.socialLinks {
+.socialIcons {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 2rem; /* space-x-8 */
 }
 
 .socialLink {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: opacity 0.3s ease;
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .socialLink:hover {
   opacity: 0.8;
 }
 
-.socialIconWrapper {
-  width: 2.5rem;
-  height: 2.5rem;
+.iconContainer {
+  width: 2.5rem; /* w-10 */
+  height: 2.5rem; /* h-10 */
   background-color: white;
-  color: #4b5563;
+  color: #4b5563; /* text-gray-600 */
   border-radius: 9999px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem; /* mb-2 */
 }
 
-.socialIcon {
-  width: 1.25rem;
-  height: 1.25rem;
+.icon {
+  width: 1.25rem; /* w-5 */
+  height: 1.25rem; /* h-5 */
+}
+
+/* Dark mode styles */
+.socialsSection_dark {
+  color: #9ca3af; /* darker gray for dark mode */
+  background-color: #111827; /* dark background (similar to gray-900) */
+}
+
+.iconContainer_dark {
+  background-color: #374151; /* dark background for icons */
+  color: #e5e7eb; /* light text color */
 }
