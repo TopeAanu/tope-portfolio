@@ -23,36 +23,38 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
   const isDarkMode = mounted && theme === "dark";
 
   return (
-    <section
-      id="projects"
-      className={`
+    <div>
+      <section
+        id="projects"
+        className={`
         ${styles.projectsSection}
         ${isDarkMode ? styles.projectsSection_dark : ""}
       `}
-    >
-      <div className={styles.container}>
-        <div className={styles.sectionWrapper}>
-          <div className={styles.sectionContent}>
-            <h2
-              className={`
+      >
+        <div className={styles.container}>
+          <div className={styles.sectionWrapper}>
+            <div className={styles.sectionContent}>
+              <h2
+                className={`
                 ${styles.sectionTitle}
                 ${isDarkMode ? styles.sectionTitle_dark : ""}
               `}
-            >
-              Projects
-            </h2>
-            <div className={styles.projectGrid}>
-              {projects.map((project) => (
-                <ProjectCard
-                  key={project.id}
-                  project={project}
-                  isDarkMode={isDarkMode}
-                />
-              ))}
+              >
+                Projects
+              </h2>
+              <div className={styles.projectGrid}>
+                {projects.map((project) => (
+                  <ProjectCard
+                    key={project.id}
+                    project={project}
+                    isDarkMode={isDarkMode}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }
