@@ -76,17 +76,108 @@
   color: #f8fafc;
 }
 
-.projectImage {
+/* New styles for the overlay */
+.projectImageContainer {
+  position: relative;
   background-color: #e5e7eb;
+  width: 100%;
+  height: 12rem;
+  overflow: hidden;
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 12rem;
   object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-.projectContent {
+.projectCard:hover .projectImage {
+  transform: scale(1.05);
+}
+
+.projectOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.projectOverlay::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.projectCard:hover .projectOverlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlayContent {
+  padding: 1.5rem;
+  text-align: left;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+.overlayTitle {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: white;
+  text-align: left;
+}
+
+.overlayDescription {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.overlayTechTag {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.overlayButton {
+  display: inline-block;
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  margin-top: 0.5rem;
+}
+
+.overlayButton:hover {
+  background-color: #2563eb;
+}
+
+/* Original styles */
+/* .projectContent {
   display: flex;
   flex-direction: column;
   padding: 1.5rem;
@@ -145,7 +236,7 @@
   color: #4b5563;
   font-weight: 500;
   transition: color 0.3s ease;
-  text-decoration:underline;
+  text-decoration: underline;
   margin-top: auto;
 }
 
@@ -155,9 +246,8 @@
 
 .projectLink_dark {
   color: #f8fafc;
-
 }
 
 .projectLink_dark:hover {
   color: #c9d1dd;
-}
+} */

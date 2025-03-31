@@ -35,7 +35,7 @@ export default function Home() {
       description:
         "A fully responsive e-commerce website with product filtering and user authentication.",
       technologies: ["React", "Node.js", "MongoDB", "Express"],
-      imageUrl: "/images/project1.jpg",
+      imageUrl: "tommy.jpg",
     },
     {
       id: 2, // Another unique id
@@ -43,7 +43,7 @@ export default function Home() {
       description:
         "A productivity application for organizing and tracking personal and team tasks.",
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Firebase"],
-      imageUrl: "/images/project2.jpg",
+      imageUrl: "tommy.jpg",
     },
     {
       id: 3, // And another
@@ -51,7 +51,7 @@ export default function Home() {
       description:
         "A modern, responsive portfolio website showcasing web development projects.",
       technologies: ["React", "Tailwind CSS", "Framer Motion"],
-      imageUrl: "/images/project3.jpg",
+      imageUrl: "tommy.jpg",
     },
   ];
 
