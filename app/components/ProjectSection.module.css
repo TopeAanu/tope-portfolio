@@ -76,7 +76,7 @@
   color: #f8fafc;
 }
 
-/* New styles for the overlay */
+/* Overlay styles */
 .projectImageContainer {
   position: relative;
   background-color: #e5e7eb;
@@ -111,12 +111,12 @@
   transition: opacity 0.3s ease;
   pointer-events: none;
   overflow-y: auto;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none; 
 }
 
 .projectOverlay::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none; 
 }
 
 .projectCard:hover .projectOverlay {
@@ -155,17 +155,17 @@
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
   font-size: 0.75rem;
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-right: 0;
+  margin-bottom: 0;
   display: inline-block;
 }
 
 .overlayButton {
   display: inline-block;
-  background-color: #3b82f6;
+  background-color: #374151;
   color: white;
   padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
+  border-radius: 5px;
   font-weight: 500;
   transition: background-color 0.3s ease;
   text-decoration: none;
@@ -173,81 +173,5 @@
 }
 
 .overlayButton:hover {
-  background-color: #2563eb;
+  background-color: #101623;
 }
-
-/* Original styles */
-/* .projectContent {
-  display: flex;
-  flex-direction: column;
-  padding: 1.5rem;
-}
-
-.projectTitle {
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: #111827;
-  font-size: 1.25rem;
-}
-
-.projectTitle_dark {
-  color: #f8fafc;
-}
-
-.projectDescription {
-  color: #4b5563;
-  margin-bottom: 1rem;
-  font-size: 0.875rem;
-}
-
-@media (min-width: 768px) {
-  .projectDescription {
-    font-size: 1rem;
-  }
-}
-
-.projectDescription_dark {
-  color: #e2e8f0;
-}
-
-.techTags {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 1rem;
-}
-
-.techTag {
-  background-color: #f3f4f6;
-  color: #374151;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.25rem;
-  font-size: 0.75rem;
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
-  display: inline-block;
-}
-
-.techTag_dark {
-  background-color: #475569;
-  color: #f8fafc;
-}
-
-.projectLink {
-  color: #4b5563;
-  font-weight: 500;
-  transition: color 0.3s ease;
-  text-decoration: underline;
-  margin-top: auto;
-}
-
-.projectLink:hover {
-  color: #151b23;
-}
-
-.projectLink_dark {
-  color: #f8fafc;
-}
-
-.projectLink_dark:hover {
-  color: #c9d1dd;
-} */

@@ -32,7 +32,7 @@ export default function Navbar() {
               href="#"
               className={`${styles.logo} ${isDarkMode ? styles.logo_dark : ""}`}
             >
-              CodeMamba
+              Tope
             </a>
           </div>
           {/* Desktop Navigation */}

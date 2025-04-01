@@ -78,14 +78,14 @@
 .skillsContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.2rem;
 }
 
 .skillBadge {
-  background-color: #f9fafb;
+  background-color: #d8e1eb;
   color: #374151;
   padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
+  border-radius: 5px;
   font-size: 0.875rem;
 }
 

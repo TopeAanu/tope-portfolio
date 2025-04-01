@@ -29,9 +29,13 @@
   font-weight: bold;
   font-size: 1.5rem;
   letter-spacing: 0.05em;
-  color: #4b5563; /* gray-600 */
+  color: #171c23; /* gray-600 */
   font-family: var(--font-display), sans-serif;
   transition: colors 0.2s ease;
+}
+
+.logo:hover {
+  color: #526388;
 }
 
 .logo_dark {
@@ -52,8 +56,8 @@
 }
 
 .navLink:hover {
-  background-color: #eef2ff; /* indigo-50 */
-  color: #4f46e5; /* indigo-600 */
+  background-color: #e7ebf2; /* indigo-50 */
+  color: #101623; /* indigo-600 */
 }
 
 .navLink_dark {

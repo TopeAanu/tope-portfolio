@@ -11,19 +11,26 @@ export default function Home() {
   const skillsData = [
     {
       category: "Frontend",
-      items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML/CSS"],
+      items: [
+        "React",
+        "Next.js",
+        "JavaScript",
+        "TypeScript",
+        "Tailwind CSS",
+        "HTML/CSS",
+      ],
     },
     {
       category: "Backend",
-      items: ["Node.js", "Express", "MongoDB", "PostgreSQL", "REST APIs"],
+      items: ["Node.js", "MongoDB", "PostgreSQL", "REST APIs"],
     },
     {
-      category: "Tools & Others",
-      items: ["Git", "GitHub", "VS Code", "Figma", "Responsive Design"],
+      category: "Tools",
+      items: ["Git", "GitHub", "VS Code", "Figma",],
     },
     {
       category: "Learning",
-      items: ["GraphQL", "AWS", "Docker", "Redux", "React Native"],
+      items: ["Golang",],
     },
   ];
 

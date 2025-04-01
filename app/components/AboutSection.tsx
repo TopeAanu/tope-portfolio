@@ -40,7 +40,13 @@ export default function AboutSection() {
               {/* I'm a passionate full-stack developer with expertise in modern web
               technologies. I specialize in building responsive, performant web
               applications using React, Next.js, and Node.js. */}
-              I'm Tope, a dogged frontend software engineer and technical writer with 2 plus years experience. In my career, I have built a few number of real time applications that solved a major proplem in 1) the educational sector, 2) a commercial app for purchasing mobile, desktop devices, and ordering repair services, etc. I have authored articles for professional publications like dev.to, openreplay, emergeintech, medium, etc. One of my articles on dev.to gained over 53,000 impressions, over 1k likes, and a lot meaningful engagements. Someone called the article a godtier. Learn more about me below. 🤓
+              {/* I'm Tope, a dogged frontend software engineer and technical writer with 2 plus years experience. In my career, I have built a few number of real time applications that solved a major proplem in 1) the educational sector, 2) a commercial app for purchasing mobile, desktop devices, and ordering repair services, etc. I have authored articles for professional publications like dev.to, openreplay, emergeintech, medium, etc. One of my articles on dev.to gained over 53,000 impressions, over 1k likes, and a lot meaningful engagements. Someone called the article a godtier. Learn more about me below. 🤓 */}
+              I’m Tope, a software developer and technical writer. I am
+              passionate about providing real time solutions using modern web
+              technologies like Reactjs, Nextjs, Typescript, JavaScript(ES6+),
+              etc., and crafting easy-to-understand technical contents. I’m
+              currently learning and building with Golang. I am always eager to
+              contribute to Open Source projects.
             </p>
             {/* <p
               className={`${styles.paragraph} ${

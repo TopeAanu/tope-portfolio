@@ -53,7 +53,7 @@
   color: white;
   font-weight: 500;
   padding: 0.5rem 1.5rem;
-  border-radius: 9999px;
+  border-radius: 5px;
   display: inline-flex;
   align-items: center;
   transition: background-color 0.3s;
@@ -61,27 +61,6 @@
 
 .button:hover {
   background-color: #101623;
-}
-
-/* Dark mode styling can be added here if needed */
-.sectionDark {
-  background-color: #1f2937;
-}
-
-.headingDark {
-  color: #f3f4f6;
-}
-
-.paragraphDark {
-  color: #d1d5db;
-}
-
-.buttonDark {
-  background-color: #4b5563;
-}
-
-.buttonDark:hover {
-  background-color: #6b7280;
 }
 
 /* AboutSection.module.css - Add/update these rules */
@@ -103,9 +82,9 @@
 }
 
 .buttonDark {
-  background-color: #4b5563;
+  background-color: #374151;
 }
 
 .buttonDark:hover {
-  background-color: #6b7280;
+  background-color: #101623;
 }
