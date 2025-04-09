@@ -39,7 +39,7 @@ export default function SkillsSection({ skills }: SkillsSectionProps) {
                 isDarkMode ? styles.headingDark : ""
               }`}
             >
-              My Skills
+              Skills
             </h2>
             <div className={styles.skillsGrid}>
               {skills.map((skillGroup, index) => (

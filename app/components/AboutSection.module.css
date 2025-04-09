@@ -1,30 +1,39 @@
 /* AboutSection.module.css */
-
 .section {
   padding: 10rem 0 5rem 0;
   background-color: #fff;
 }
-
 .container {
   max-width: 72rem;
   margin: 0 auto;
   padding: 0 1rem;
 }
-
 .content {
   display: flex;
   justify-content: center;
 }
-
 .contentInner {
   width: 100%;
   position: relative;
 }
-
 @media (min-width: 768px) {
   .contentInner {
     width: 66.666667%;
   }
+}
+
+/* Added Image Container Styles */
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.profileImage {
+  width: 120px;
+  height: 120px; 
+  border-radius: 10%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .heading {
@@ -32,22 +41,18 @@
   font-weight: 700;
   margin-bottom: 3rem;
 }
-
 .paragraph {
   font-size: 1.125rem;
   margin-bottom: 1rem;
 }
-
 .lastParagraph {
   font-size: 1.125rem;
   margin-bottom: 2rem;
 }
-
 .buttonContainer {
   display: flex;
   justify-content: flex-end;
 }
-
 .button {
   background-color: #374151;
   color: white;
@@ -58,33 +63,25 @@
   align-items: center;
   transition: background-color 0.3s;
 }
-
 .button:hover {
   background-color: #101623;
 }
-
 /* AboutSection.module.css - Add/update these rules */
-
 .sectionDark {
   background-color: #1f2937;
 }
-
 .headingDark {
   color: #f3f4f6;
 }
-
 .paragraphDark {
   color: #d1d5db;
 }
-
 .lastParagraphDark {
   color: #d1d5db;
 }
-
 .buttonDark {
   background-color: #374151;
 }
-
 .buttonDark:hover {
   background-color: #101623;
 }

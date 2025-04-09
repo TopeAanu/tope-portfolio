@@ -34,9 +34,9 @@
   transition: colors 0.2s ease;
 }
 
-.logo:hover {
+/* .logo:hover {
   color: #526388;
-}
+} */
 
 .logo_dark {
   color: white;

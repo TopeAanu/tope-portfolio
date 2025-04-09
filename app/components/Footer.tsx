@@ -22,7 +22,7 @@ export default function Footer() {
     >
       <div className={styles.container}>
         <p className={styles.copyright}>
-          &copy; 2025 Tope Fasasi. All rights reserved.
+          &copy; 2025 Tope Fasasi
         </p>
       </div>
     </footer>

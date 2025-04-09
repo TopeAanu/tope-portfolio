@@ -18,20 +18,32 @@ export default function Home() {
         "TypeScript",
         "Tailwind CSS",
         "HTML/CSS",
+        "Bootstrap",
+        "Redux",
       ],
     },
     {
-      category: "Backend",
-      items: ["Node.js", "MongoDB", "PostgreSQL", "REST APIs"],
+      category: "Others",
+      items: [
+        "Node.js",
+        "MongoDB",
+        "PostgreSQL",
+        "REST APIs",
+        "SQL",
+        "Git",
+        "GitHub",
+        "VS Code",
+        "Figma",
+      ],
     },
-    {
-      category: "Tools",
-      items: ["Git", "GitHub", "VS Code", "Figma",],
-    },
-    {
-      category: "Learning",
-      items: ["Golang",],
-    },
+    // {
+    //   category: "Tools",
+    //   items: ["Git", "GitHub", "VS Code", "Figma"],
+    // },
+    // {
+    //   category: "Learning",
+    //   items: ["Golang"],
+    // },
   ];
 
   // Define project data

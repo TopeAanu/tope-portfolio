@@ -28,7 +28,7 @@ export default function SocialsSection() {
       <div className={styles.container}>
         <div className={styles.socialIcons}>
           <a
-            href="https://github.com/"
+            href="https://github.com/TopeAanu?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.socialLink}
@@ -42,7 +42,7 @@ export default function SocialsSection() {
             </div>
           </a>
           <a
-            href="https://linkedin.com/"
+            href="https://www.linkedin.com/in/tope-fasasi-6280a1245/"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.socialLink}
@@ -56,7 +56,7 @@ export default function SocialsSection() {
             </div>
           </a>
           <a
-            href="https://x.com/"
+            href="https://x.com/tope_fasasi"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.socialLink}

@@ -32,7 +32,7 @@ export default function Navbar() {
               href="#"
               className={`${styles.logo} ${isDarkMode ? styles.logo_dark : ""}`}
             >
-              Tope
+              TOPE FASASI
             </a>
           </div>
           {/* Desktop Navigation */}
