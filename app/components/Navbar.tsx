@@ -7,7 +7,7 @@ import styles from "./Navbar.module.css";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const { theme, setTheme } = useTheme();
+  const { theme, resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState<boolean>(false);
 
   // Wait for component to mount to access theme
@@ -20,8 +20,25 @@ export default function Navbar() {
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
-  // Determine if we're in dark mode
-  const isDarkMode = mounted && theme === "dark";
+  // Use resolvedTheme instead of theme to get the actual applied theme
+  const isDarkMode = mounted && (resolvedTheme === "dark" || theme === "dark");
+
+  // Don't render with proper styling until mounted to prevent hydration mismatch
+  if (!mounted) {
+    return (
+      <nav className={styles.navbar}>
+        <div className={styles.container}>
+          <div className={styles.flexContainer}>
+            <div>
+              <a href="#" className={styles.logo}>
+                TOPE FASASI
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    );
+  }
 
   return (
     <nav className={`${styles.navbar} ${isDarkMode ? styles.navbar_dark : ""}`}>
@@ -71,41 +88,37 @@ export default function Navbar() {
             </a>
 
             {/* Theme Toggle Button */}
-            {mounted && (
-              <button
-                onClick={toggleTheme}
-                className={`${styles.themeButton} ${
-                  isDarkMode ? styles.themeButton_dark : ""
-                }`}
-                aria-label="Toggle dark mode"
-              >
-                {isDarkMode ? (
-                  <FaSun className="h-5 w-5" />
-                ) : (
-                  <FaMoon className="h-5 w-5" />
-                )}
-              </button>
-            )}
+            <button
+              onClick={toggleTheme}
+              className={`${styles.themeButton} ${
+                isDarkMode ? styles.themeButton_dark : ""
+              }`}
+              aria-label="Toggle dark mode"
+            >
+              {isDarkMode ? (
+                <FaSun className="h-5 w-5" />
+              ) : (
+                <FaMoon className="h-5 w-5" />
+              )}
+            </button>
           </div>
 
           {/* Mobile menu button and theme toggle */}
           <div className={styles.mobileMenu}>
             {/* Theme Toggle Button - Mobile */}
-            {mounted && (
-              <button
-                onClick={toggleTheme}
-                className={`${styles.themeButton} ${
-                  isDarkMode ? styles.themeButton_dark : ""
-                }`}
-                aria-label="Toggle dark mode"
-              >
-                {isDarkMode ? (
-                  <FaSun className="h-5 w-5" />
-                ) : (
-                  <FaMoon className="h-5 w-5" />
-                )}
-              </button>
-            )}
+            <button
+              onClick={toggleTheme}
+              className={`${styles.themeButton} ${
+                isDarkMode ? styles.themeButton_dark : ""
+              }`}
+              aria-label="Toggle dark mode"
+            >
+              {isDarkMode ? (
+                <FaSun className="h-5 w-5" />
+              ) : (
+                <FaMoon className="h-5 w-5" />
+              )}
+            </button>
 
             {/* Mobile menu button */}
             <button
@@ -144,7 +157,11 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className={styles.mobileNavLinks}>
+        <div
+          className={`${styles.mobileNavLinks} ${
+            isDarkMode ? styles.mobileNavLinks_dark : ""
+          }`}
+        >
           <div>
             <a
               href="#about"

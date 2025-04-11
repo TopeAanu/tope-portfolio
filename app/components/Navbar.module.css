@@ -5,7 +5,7 @@
   position: fixed;
   width: 100%;
   z-index: 50;
-  transition: colors 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .navbar_dark {
@@ -31,12 +31,8 @@
   letter-spacing: 0.05em;
   color: #171c23; /* gray-600 */
   font-family: var(--font-display), sans-serif;
-  transition: colors 0.2s ease;
+  transition: color 0.2s ease;
 }
-
-/* .logo:hover {
-  color: #526388;
-} */
 
 .logo_dark {
   color: white;
@@ -52,7 +48,8 @@
 .navLink {
   padding: 0.5rem 0.75rem;
   border-radius: 0.375rem;
-  transition: colors 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  color: #374151; /* Explicitly set dark color for light mode */
 }
 
 .navLink:hover {
@@ -96,6 +93,59 @@
 
 .mobileNavLinks {
   padding: 0.5rem;
+  background-color: white;
+}
+
+.mobileNavLinks_dark {
+  background-color: #1f2937; /* gray-800 */
+}
+
+.mobileNavLink {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  color: #374151; /* Explicitly set dark color for light mode */
+}
+
+.mobileNavLink:hover {
+  background-color: #eef2ff; /* indigo-50 */
+  color: #4f46e5; /* indigo-600 */
+}
+
+.mobileNavLink_dark {
+  color: #d1d5db; /* gray-300 */
+}
+
+.mobileNavLink_dark:hover {
+  background-color: #374151; /* gray-700 */
+  color: white;
+}
+
+/* Add data-theme attribute selectors for more robust theming */
+[data-theme="light"] .logo {
+  color: #171c23;
+}
+
+[data-theme="dark"] .logo {
+  color: white;
+}
+
+[data-theme="light"] .navLink,
+[data-theme="light"] .mobileNavLink {
+  color: #374151;
+}
+
+[data-theme="dark"] .navLink,
+[data-theme="dark"] .mobileNavLink {
+  color: #d1d5db;
+}
+
+[data-theme="light"] .mobileNavLinks {
+  background-color: white;
+}
+
+[data-theme="dark"] .mobileNavLinks {
+  background-color: #1f2937;
 }
 
 /* Media query for mobile */
@@ -112,25 +162,5 @@
 
   .mobileNavLinks {
     display: block;
-  }
-
-  .mobileNavLink {
-    display: block;
-    padding: 0.5rem 0.75rem;
-    border-radius: 0.375rem;
-  }
-
-  .mobileNavLink:hover {
-    background-color: #eef2ff; /* indigo-50 */
-    color: #4f46e5; /* indigo-600 */
-  }
-
-  .mobileNavLink_dark {
-    color: #d1d5db; /* gray-300 */
-  }
-
-  .mobileNavLink_dark:hover {
-    background-color: #374151; /* gray-700 */
-    color: white;
   }
 }

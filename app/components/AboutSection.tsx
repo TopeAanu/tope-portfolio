@@ -6,14 +6,22 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function AboutSection() {
-  const { theme } = useTheme();
+  const { theme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+
   // Wait for component to mount to access theme
   useEffect(() => {
     setMounted(true);
   }, []);
-  // Determine if we're in dark mode
-  const isDarkMode = mounted && theme === "dark";
+
+  // Use resolvedTheme instead of theme to get the actual applied theme
+  const isDarkMode = mounted && (resolvedTheme === "dark" || theme === "dark");
+
+  // Don't render content until mounted to prevent hydration mismatch
+  if (!mounted) {
+    return <div className={styles.section}></div>; // Empty placeholder
+  }
+
   return (
     <section
       id="about"
@@ -24,15 +32,15 @@ export default function AboutSection() {
           <div className={styles.contentInner}>
             {/* Added Image Container */}
             <div className={styles.imageContainer}>
-              <Image 
-                src="/profilepic.jpg" // Replace with your actual image path
-                alt="Profile picture" 
+              <Image
+                src="/profilepic.jpg"
+                alt="Profile picture"
                 width={200}
                 height={200}
                 className={styles.profileImage}
               />
             </div>
-            
+
             <h2
               className={`${styles.heading} ${
                 isDarkMode ? styles.headingDark : ""
@@ -45,10 +53,10 @@ export default function AboutSection() {
                 isDarkMode ? styles.paragraphDark : ""
               }`}
             >
-              I'm Tope, a software developer and technical writer. I am
-              passionate about building practical web applications that solve
-              real-world problems using modern web technologies like React.js,
-              Next.js, TypeScript, JavaScript (ES6+), etc., and crafting
+              I'm Tope, a software developer and technical writer passionate
+              about building practical web applications that solve real-world
+              problems using modern web technologies like React.js, Next.js,
+              TypeScript, JavaScript (ES6+), etc., and crafting
               easy-to-understand technical content. I'm always available to
               collaborate and contribute to open source.
             </p>
